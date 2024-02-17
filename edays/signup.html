@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"/>
+    <link href="img/icons/online_shopping.png" rel="shortcut icon" type="image/x-icon">
+    <link href="css/signup.css"  rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-day Shop</title>
+</head>
+<body>
+    <div class="login_form">
+        <div class="form_header"><h1>SIGNUP</h1></div>
+        <div class="form_body">
+            <form>
+                <div class="text_feild">
+                    <label>Fist Name</label><br>
+                    <input type="text" id="first_name" required=""> 
+                </div>
+                <div class="text_feild">
+                    <label>Last Name</label><br>
+                    <input type="text" id="last_name" required=""> 
+                </div>
+                <div class="text_feild">
+                    <label>Email</label><br>
+                    <input type="email" id="email"  required=""> 
+                </div>
+                <div class="text_feild">
+                    <label>Phone No.</label><br>
+                    <input type="number" id="phone" required=""> 
+                </div>
+                <div class="text_feild">
+                    <label>Addredd</label><br>
+                    <input type="text" id="address"  required=""> 
+                </div>
+                <div class="text_feild">
+                    <label>Password</label><br>
+                    <input type="password" id="password"required=""> 
+                </div>
+                <div class="error" id="error" style="color: red;"></div>
+                <input type="submit" class="btn" id="signupbtn" value="Signup">
+            </form>
+        </div>
+        <div class="form_bottom">Already have an account<a href="index.html">login</a></div>
+    </div>
+    <script src="js/signup.js"></script>
+</body>
+</html>

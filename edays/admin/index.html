@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+ 	<head>
+		<meta charset="UTF-8">
+		<link
+		rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+		integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+		crossorigin="anonymous"
+		referrerpolicy="no-referrer"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 		<title>E-day Shop</title>
+ 		<link href="../img/icons/online_shopping.png" rel="shortcut icon" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+ 	</head>
+<body>
+
+	<header>
+		<div class="container">
+			<div class="brand">
+				<div class="logo">
+					<a href="index.html">
+						<img src="../img/icons/online_shopping.png">
+						<div class="logo-text">
+							<p class="big-logo">E_Day</p>
+							<p class="small-logo">shop</p>
+						</div>
+					</a>
+				</div> <!-- logo -->
+				<div class="shop-icon">
+					<div class="dropdown">
+						<img src="../img/icons/account.png">
+						<div class="dropdown-menu">
+							<ul>
+								<li><a id="logout" href="#">Logout</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div> 
+		</div>
+	</header>
+
+	<main>
+		
+		<div class="main-content">
+			<div class="sidebar">
+				<h3>Menu</h3>
+				<ul>
+					<li><a class="active" href="index.html">Users</a></li>
+					<li><a href="order.html">Order</a></li>
+					<li><a href="product.html">Product</a></li>
+					<li><a href="category.html">Category</a></li>
+					<li><a href="stock.html">Stock</a></li>
+				</ul>				
+			</div>
+			<div class="content">
+				<h3>Users</h3>
+				<div class="content-detail">
+					<table>
+						<thead>
+							<tr>
+								<th>First Name</th>
+								<th>Last Name</th>
+								<th>Email</th>
+								<th>Phone No.</th>
+								<th>Address</th>
+								<th>Delete</th>									
+							</tr>
+						</thead>
+						<tbody id="table_body">
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>		
+
+	</main>
+
+	<footer>
+		<div class="container">
+			<div class="footer-bar">
+				<div class="copyright-text">
+					<p>Copryright 2024 - All Rights Reserved</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="../admin/js/users.js"></script>
+</body>
+
+</html>

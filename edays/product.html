@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+ 	<head>
+ 		<!-- Meta Tags -->
+		<meta charset="UTF-8">
+		<meta name="author" content="M.S/S.G">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>E-day Shop</title>
+		<link href="img/icons/online_shopping.png" rel="shortcut icon" type="image/x-icon">
+
+ 		<!-- Style Sheet -->
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<!-- Javascript -->	
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<!-- FancyBox -->
+		<link rel="stylesheet" href="fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
+		<script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js"></script>
+
+		<!-- Optionally add helpers - button, thumbnail and/or media -->
+		<link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-buttons.css" type="text/css" media="screen" />
+		<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-buttons.js"></script>
+		<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-media.js"></script>
+
+		<link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-thumbs.css" type="text/css" media="screen" />
+		<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-thumbs.js"></script>
+		<script>
+		$(document).ready(function(){		
+			$('.fancybox').fancybox({
+				openEffect  : 'none',
+				closeEffect : 'none',
+
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					buttons	: {}
+				},
+
+				afterLoad : function() {
+					this.title = 'Image ' + (this.home + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+				}
+			});
+		});
+
+  		</script>
+ 	</head>
+<body>
+
+	<header> 
+		<div class="container"> 
+			<div class="brand">
+				<div class="logo">
+					<a href="home.html">
+						<img src="img/icons/online_shopping.png">
+						<div class="logo-text">
+							<p class="big-logo">E_Day</p>
+							<p class="small-logo">shop</p>
+						</div>
+					</a>
+				</div> <!-- logo -->
+				<div class="shop-icon">
+					<div class="dropdown">
+						<img src="img/icons/account.png">
+						<div class="dropdown-menu">
+							<ul>
+								<li><a href="account.html">My Account</a></li>
+								<li><a href="orders.html">My Orders</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="dropdown">
+						<a href="favorite.html"><img src="img/icons/heart.png"></a>
+					</div>
+					<div class="dropdown">
+						<a href="cart.html"><img src="img/icons/shopping_cart.png"></a>
+					</div>
+				</div> <!-- shop icons -->
+			</div> <!-- brand -->
+
+			<div class="menu-bar">
+				<div class="menu">
+					<ul>
+						<li><a href="home.html">Home</a></li>
+						<li><a href="shop.html">Shop</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</div>
+			</div> <!-- menu -->
+		</div> <!-- container -->
+	</header> <!-- header -->
+
+	<div class="container">
+		<main>
+			<div class="breadcrumb">
+				<ul>
+					<li><a href="home.html">Home</a></li>
+					<li> / </li>
+					<li><a href="">Shop</a></li>
+					<li> / </li>
+					<li><a href="">Product</a></li>
+				</ul>
+			</div> <!-- End of Breadcrumb-->
+
+			<div class="single-product">
+				<div class="images-section">
+					<div class="larg-img">
+						<img id="image" src="img/product/img1.jpg">
+						
+                         
+					
+					</div>
+					
+				</div> <!-- End of Images Section-->
+
+				<div class="product-detail">
+					<div class="product-name">
+						<h2 id="name"></h2>
+					</div>
+					<div class="product-price">
+						<h3 id="price"></h3>
+					</div>
+					<hr>
+					<div class="product-description">
+						<p id="short_description"></p>
+					</div>
+                    
+
+					<hr>
+					<div class="product-cart">
+						<form id="cart-form">
+							<div class="form-group">
+								<input type="number" id="cartNumber" class="cart-number" name="cartNumber" value="1" min="1">
+								<input type="submit" name="addToCart" value="Add To Cart" id="addToCart">
+							</div>
+							<div id="error"></div>
+						</form>
+						<form id="wishlist-form">
+							<div class="form-group">
+								<input type="checkbox" class="wishlist" name="wishlist" id="favorite"> Add To Wishlist
+							</div>
+						</form>
+					</div>
+					<hr>
+					<div class="product-meta">
+						<p id="category"><b>Category: </b></p>
+						<p><b>Share This Product: </b> Facebook, Twitter</p>
+					</div>
+				</div> <!-- End of Product Detail-->
+			</div>
+
+			
+			<hr>
+			<div class="product-long-description">
+				<h3>Product Description</h3>
+				<p id="long_description"></p>
+				
+			</div>
+			<hr>
+			<div class="new-product-section">
+				<div class="product-section-heading">
+					<h2>Recommend Products <img src="img/icons/good_quality.png"></h2>
+					<h3>OUR BEST PRODUCTS RECOMMENDED FOR YOU</h3>
+				</div>
+				<div id="Recommend" class="product-content"></div>
+			</div> 
+		</main>
+	</div>
+
+	<footer>
+		<div class="container">
+			<div class="footer-widget">
+				<div class="widget">
+					<div class="widget-heading">
+						<h3>Important Link</h3>
+					</div>
+					<div class="widget-content">
+						<ul>
+							<li><a href="about.html">About</a></li>
+							<li><a href="contact.html">Contact</a></li>
+							<li><a href="refund.html">Refund Policy</a></li>
+							<li><a href="terms.html">Terms & Conditions</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="widget">
+					<div class="widget-heading">
+						<h3>Information</h3>
+					</div>
+					<div class="widget-content">
+						<ul>
+							<li><a href="account.html">My Account</a></li>
+							<li><a href="orders.html">My Orders</a></li>
+							<li><a href="cart.html">Cart</a></li>
+							<li><a href="checkout.html">Checkout</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="widget">
+					<div class="widget-heading">
+						<h3>Follow us</h3>
+					</div>
+					<div class="widget-content">
+						<div class="follow">
+							<ul>
+								<li><a href="#"><img src="img/icons/facebook.png"></a></li>
+								<li><a href="#"><img src="img/icons/twitter.png"></a></li>
+								<li><a href="#"><img src="img/icons/instagram.png"></a></li>
+							</ul>
+						</div>						
+					</div>
+					<div class="widget-heading">
+						<h3>Subscribe for Newsletter</h3>
+					</div>
+					<div class="widget-content">
+						<div class="subscribe">
+							<form>
+								<div class="form-group">
+									<input type="text" class="form-control" name="subscribe" placeholder="Email">
+									<img src="img/icons/paper_plane.png">
+								</div>
+							</form>
+						</div>						
+					</div>
+				</div>
+			</div> <!-- Footer Widget -->
+			<div class="footer-bar">
+				<div class="copyright-text">
+					<p>Copyright 2024 - All Rights Reserved</p>
+				</div>
+				<div class="payment-mode">
+					<img src="img/icons/paper_money.png">
+					<img src="img/icons/visa.png">
+					<img src="img/icons/mastercard.png">
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="js/product.js"></script>
+</body>
+
+</html>
